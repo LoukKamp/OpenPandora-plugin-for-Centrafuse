@@ -1,0 +1,59 @@
+<SKIN id="Clean" width="800" height="480">
+  <FONTCLASSES>
+    <FONTCLASS id="ButtonsFont" font="Century Gothic" color="#ffffff" color2="#ffffff" size="15" style="Bold" align="Center" wrap="True" xoffset="0" yoffset="0" />
+    <FONTCLASS id="LabelFont" font="Century Gothic" color="#ffffff" color2="#ffffff" size="12" style="" align="Left" wrap="False" xoffset="0" yoffset="-2" />
+  </FONTCLASSES>
+  <IMAGES>
+    <IMAGE id="Main_Off" path="main_off.png" />
+    <IMAGE id="Main_On" path="main_on.png" />
+  </IMAGES>
+  <SECTIONS>
+    <SECTION id="Main" effect="ToApp" bounds="0;88;800;304" off="Main_Off" down="Main_On">
+      <CONTROLS>
+        <CONTROL type="Button" id="upButton" bounds="409;1;80;149" effect="" tabindex="0" enabled="true" cmlaction="OpenPandora.ScrollUp" />
+        <CONTROL type="Button" id="downButton" bounds="409;152;80;149" effect="" tabindex="0" enabled="true" cmlaction="OpenPandora.ScrollDown" />
+        <CONTROL type="PictureBox" id="albumArt" bounds="577;8;145;145" image="" />
+        <CONTROL type="Button" id="thumbsUp" bounds="526;165;74;64" effect="" tabindex="0" enabled="true" cmlaction="OpenPandora.ThumbsUp" />
+        <CONTROL type="Button" id="thumbsDown" bounds="612;165;74;64" effect="" tabindex="0" enabled="true" cmlaction="OpenPandora.ThumbsDown" />
+        <CONTROL type="Button" id="tired" bounds="698;165;74;64" effect="" tabindex="0" enabled="true" cmlaction="OpenPandora.Tired" />
+        <CONTROL type="Button" id="toSpotify" bounds="525;237;121;65" effect="" tabindex="0" enabled="true" cmlaction="OpenPandora.ToSpotify" />
+        <CONTROL type="Button" id="addStation" bounds="653;237;121;65" effect="" tabindex="0" enabled="true" cmlAction="OpenPandora.AddStation" />
+        <CONTROL type="AdvancedList" id="stationList" bounds="8;10;390;280" effect="" tabindex="0" enabled="true">
+          <LAYOUT>
+            <TEMPLATES>
+              <TEMPLATE id="default" selectable="true" layout="Stacked" baseSize="446;240" scrollbarStyleId="Scrollbar">
+                <ITEMGROUP type="Default" size="390;56">
+                  <ITEM id="playIcon" type="Image" position="3;17" size="16;16" dataSource="Playing{[value].png}" styleId="Image.Fit" />
+                  <ITEM id="Name" type="Text" position="27;17" size="280;21" dataSource="Name" styleId="Title" />
+                  <ITEM id="Line" type="Image" position="0;55" size="390;1" dataSource="cache:Separator.png" styleId="Image.Fit" />
+                </ITEMGROUP>
+                <ITEMGROUP type="Selected" size="390;56">
+                  <ITEM id="Background" type="Image" position="0;0" size="300;56" dataSource="cache:SelectionBar.png" styleId="Image.Fit" />
+                  <ITEM id="playIcon" type="Image" position="3;17" size="16;16" dataSource="Playing{[value].png}" styleId="Image.Fit" />
+                  <ITEM id="Name" type="Text" position="27;17" size="280;21" dataSource="Name" styleId="Title.Selected" />
+                  <ITEM id="playButton" type="Image" position="315;2" size="63;52" dataSource="cache:playButton.png" linkId="playStation" styleId="Image.Fit" />
+                  <ITEM id="Line" type="Image" position="0;55" size="390;1" dataSource="cache:Separator.png" styleId="Image.Fit" />
+                </ITEMGROUP>
+              </TEMPLATE>
+            </TEMPLATES>
+            <STYLES>
+              <STYLE id="Title" color="#ffffff" hAlignment="Left" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="1" trimming="true" case="Title" />
+              <STYLE id="Title.Selected" color="#000000" hAlignment="Left" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="1" trimming="true" case="Title" />
+              <STYLE id="Description" color="#ffffff" hAlignment="Left" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="3" trimming="true" case="Title" />
+              <STYLE id="Description.Selected" color="#000000" hAlignment="Left" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="3" trimming="true" case="Title" />
+              <STYLE id="Artist" color="#ffffff" hAlignment="Left" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="3" trimming="true" case="Title" />
+              <STYLE id="Artist.Selected" color="#000000" hAlignment="Left" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="3" trimming="true" case="Title" />
+              <STYLE id="Album" color="#ffffff" hAlignment="Left" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="3" trimming="true" case="Title" />
+              <STYLE id="Album.Selected" color="#000000" hAlignment="Left" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="3" trimming="true" case="Title" />
+              <STYLE id="Image.Fit" hAlignment="Fit" vAlignment="Fit" />
+              <STYLE id="Scrollbar" color="#FFFFFF" hAlignment="Right" vAlignment="Bottom" leftIndent="0" rightIndent="0" option="size:10;radius:2;minsize:32" />
+            </STYLES>
+            <FONTS include=".\Skins\Clean\listview\CommonFonts.xml" />
+          </LAYOUT>
+        </CONTROL>
+      </CONTROLS>
+    </SECTION>
+  </SECTIONS>
+  <DIALOGS>
+  </DIALOGS>
+</SKIN>

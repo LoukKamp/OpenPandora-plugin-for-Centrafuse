@@ -1,0 +1,13 @@
+﻿<APPLANG>
+  <OPENPANDORA>
+    <DISPLAYNAME>Open Pandora</DISPLAYNAME> 
+  </OPENPANDORA>
+  <SETUP>
+    <DISPLAYNAME>Open Pandora</DISPLAYNAME>
+    <DESCRIPTION>Set Account credentials, bitrate</DESCRIPTION>
+    <TITLE>OpenPandora</TITLE>
+    <EMAIL>User name (Email address)</EMAIL>
+    <PASSWORD>Password</PASSWORD>
+    <BITRATE>Preferred Bitrate</BITRATE>
+  </SETUP>
+</APPLANG>
